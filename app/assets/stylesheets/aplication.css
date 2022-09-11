@@ -1,4 +1,11 @@
+.stickTollbar{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
 /* Search bar from root_path */
+/* make the search bar float stick */
 
 .search{
     
