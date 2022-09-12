@@ -54,6 +54,8 @@ gem 'devise'
 
 gem "aws-sdk-s3"
 
+gem 'tinymce-rails'
+
 # gem 'rails-i18n'
 
 # Use Sass to process CSS

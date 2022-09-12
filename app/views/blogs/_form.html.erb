@@ -20,8 +20,9 @@
             <label for="description" class="form-label">Post Resume</label>                                                   
         </div>
         <div class="mb-3 ">
-            <label for="content" class="form-label">Post Content</label>
-            <%= f.rich_text_area :content, required: true, placeholder: "Start here your post content...", class: "form-control", rows: "60"%>
+            
+           <%= f.text_area :content, :class => "tinymce" %>
+            <%= tinymce %>
             
         </div>
         <div class="mb-3 size "> 
@@ -43,6 +44,24 @@
   </div>
  </div>
 </section>
+<script >
+
+(function()
+/* This fuction helps to fix the issue related to page that don't get the active storage content after load the page 'Edit Profile' */
+{
+  if( window.localStorage )
+  {
+    if( !localStorage.getItem('firstLoad') )
+    {
+      localStorage['firstLoad'] = true;
+      window.location.reload();
+    }  
+    else
+      localStorage.removeItem('firstLoad');
+  }
+})();
+
+</script>
 
     
 

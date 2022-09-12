@@ -10,7 +10,7 @@ class AllBlogsController < ApplicationController
       @blogs = Blog.where(:category_id => cate)
      
     else
-      @blogs = Blog.all.with_rich_text_content
+      @blogs = Blog.all
 
     end
     

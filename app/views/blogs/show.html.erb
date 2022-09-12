@@ -12,11 +12,11 @@
               <article class="blog-card ptsans contentBlog">
                 <div>
                   <h2><%= @blog.title %></h2>
-                  
+                  <%= @blog.category.category %>
                   <p>Tags: <%= link_to @blog.category.category, blogs_path(:cate => @blog.category_id), class: "italic-text-tags" %></p>
                 </div>
                 <div class="mt-5">
-                  <%= @blog.content  %>
+                  <%= raw @blog.content %>
                 </div>
               </article>
              
