@@ -14,7 +14,7 @@ import { application } from "controllers/application"
 tinymce.init({
     selector: '.tinymce',
     plugins: 'autolink charmap casechange nonbreaking codesample export emoticons image editimage fullscreen lists media preview table visualblocks',
-    toolbar: 'fullscreen preview| bold italic underline removeformat  fontsize heading | forecolor backcolor codesample| alignleft aligncenter alignright alignjustify | media image emoticons table ',
+    toolbar: 'fullscreen preview| bold italic underline removeformat  fontsize blocks | forecolor backcolor codesample| alignleft aligncenter alignright alignjustify | media image emoticons table ',
     toolbar_mode: 'floating',
     file_picker_types: 'image',
     nonbreaking_force_tab: true,
@@ -37,6 +37,7 @@ tinymce.init({
     ],
 
  
+    
 
     media_url_resolver: function (data, resolve/*, reject*/) {
   if (data.url.indexOf('YOUR_SPECIAL_VIDEO_URL') !== -1) {
